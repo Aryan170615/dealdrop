@@ -4,7 +4,7 @@ import { useRef, useState } from "react"
 import { toast } from "sonner"
 import FirecrawlApp from '@mendable/firecrawl-js';
 import { z } from "zod";
-import { Delete } from "lucide-react";
+import { Bell, Rabbit, Shield, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { Spinner } from "@/components/ui/spinner";
 const app = new FirecrawlApp({
@@ -129,27 +129,30 @@ const Hero = () => {
       <div>
         <div className="flex pt-16 gap-6">
         <div className="border w-80 rounded-xl border-gray-200 p-8">
-            <div className="text-xl font-bold">
+            <div className="text-xl justify-center flex flex-col items-center gap-2 mb-4 font-bold">
+                <Rabbit />
                 Lightning Fast
             </div>
             <div>
-                Deal Drop extracts prices in seconds, handling JavaScript and dynamic content
+                Deal Drop extracts prices in seconds, handling JavaScript and dynamic content.
             </div>
         </div>
-        <div className="border w-80 rounded-xl border-gray-200 p-8">
-            <div className="text-xl font-bold">
+        <div className="border w-80 rounded-xl  border-gray-200 p-8">
+            <div className="text-xl font-bold justify-center flex flex-col items-center gap-2 mb-4">
+               <Shield />
                 Always Reliable
             </div>
             <div>
-                Works across all major e-commerce sites with built-in anti-bot protection
+                Works across all major e-commerce sites with built-in anti-bot protection.
             </div>
         </div>
-        <div className="border w-80 rounded-xl border-gray-200 p-8">
-            <div className="text-xl font-bold">
+        <div className="border w-80 rounded-xl  border-gray-200 p-8">
+            <div className="text-xl font-bold justify-center flex flex-col items-center gap-2 mb-4">
+                <Bell />
                 Smart Alerts
             </div>
             <div>
-                Get notified instantly when prices drop below your target
+                Get notified instantly when prices drop below your target.
             </div>
         </div>
       </div>
@@ -197,7 +200,7 @@ const Hero = () => {
             className="cursor-pointer"
             onClick={() => removeProduct(product.productName)}
           >
-            <Delete />
+            <Trash2 />
           </button>
         </div>
       </div>
